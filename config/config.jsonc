@@ -1,0 +1,56 @@
+{
+  "clientId": "1074340410396266526", // The id of the discord bot
+  "guildId": "816281968575512607", // The id of the discord server
+  "mainColor": "f6c42f", // The hex color of the embeds by default
+  "lang": "main", // If you want to set english please set "main"
+
+  "closeTicketCategoryId": "1059100683577589790", // The id of the category where a closed ticket will be moved to
+  "openTicketChannelId": "1059100797062889612", // The id of the channel where the message to create a ticket will be sent
+  
+  "ticketTypes": [ // You have a limit of 25 types (the limit of Discord)
+    {
+      "codeName": "Apply for Staff", // The name need to be in lowercase
+      "name": "Apply for Staff", // The name that will be displayed in the ticket
+      "description": "CLick here to apply for staff!!", // The description of the Ticket in Create Ticket Menu
+      "emoji": "👀", // The emoji of the type (can be blank)
+      "color": "f8312f", // Can be a hex color or blank to use the main color
+      "categoryId": "1059100683577589790", // The category id where the tickets will be created
+      "customDescription": "Please explain your suggestion in detail. If you have any images, please attach them to your message.\n\nReason: REASON", // The custom description of the ticket type (set to blank to use the default description)
+      "askReason": true // If the bot should ask the reason of the ticket
+    },
+    {
+      "codeName": "Server Help", // The name need to be in lowercase
+      "name": "Server Help", // The name that will be displayed in the ticket
+      "description": "If you need help click here!", // The description of the Ticket in Create Ticket Menu
+      "emoji": "🛑", // The emoji of the type (can be blank)
+      "color": "#f8312f", // Can be a hex color or blank to use the main color
+      "categoryId": "1059100683577589790", // The category id where the tickets will be created
+      "customDescription": "Please explain your report in detail. If you have any images, please attach them to your message.\n\nReason: REASON", // The custom description of the ticket type (set to blank to use the default description)
+      "askReason": false // If the bot should ask the reason of the ticket
+    },
+    {
+      "codeName": "Donate", // The name need to be in lowercase
+      "name": "Donate", // The name that will be displayed in the ticket
+      "description": "If you want to donate click this!", // The description of the Ticket in Create Ticket Menu
+      "emoji": "🤝", // The emoji of the type (can be blank)
+      "color": "f8312f", // Can be a hex color or blank to use the main color
+      "categoryId": "1059100683577589790", // The category id where the tickets will be created
+      "customDescription": "Please explain your report in detail. If you have any images, please attach them to your message.\n\nReason: REASON", // The custom description of the ticket type (set to blank to use the default description)
+      "askReason": false // If the bot should ask the reason of the ticket
+    }
+  ],
+  "ticketNameOption": "Ticket-USERNAME", // Here is all parameter: USERNAME, USERID, TICKETCOUNT
+  "rolesWhoHaveAccessToTheTickets": [
+    "1059477896047116348",
+    "1059477905811451954"
+  ], // Roles who can access to the tickets
+  "pingRoleWhenOpened": true,
+  "roleToPingWhenOpenedId": ["1059477905811451954"], // The role to ping when a ticket is opened
+  "logs": true,
+  "logsChannelId": "1059100740913745960", // The id of the channel where the logs will be sent
+  "claimButton": true,
+  "whoCanCloseTicket": "STAFFONLY", // STAFFONLY (roles configured at "rolesWhoHaveAccessToTheTickets") or EVERYONE
+  "closeButton": true, // If false the ticket can be closed only by doing /closes
+  "askReasonWhenClosing": true, // If false the ticket will be closed without asking the reason
+  "maxTicketOpened": 1 // The number of tickets the user can open while another one is already open. Set to 0 to unlimited
+}
